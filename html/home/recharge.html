@@ -99,6 +99,7 @@
             width: 220px;
             font-size: 18px;
             padding-left: 40px;
+            color:#25E198 ;
         }
 
         .m_left {
@@ -128,7 +129,10 @@
             height:50px ;
             width: 120px;
         }
-
+        .input:focus {
+            outline:none;
+            border: 1px solid #25E198;
+        }
     </style>
 </head>
 <body class="back">
@@ -178,10 +182,15 @@
         <button class="ant-btn ant-btn-red">去充值</button>
     </div>
 </div>
->>>>>>> devlop
 </body>
 <script>
     $(function () {
+        $(".input").focus(function () {
+            $(".font").css("color","#25E198");
+        }).blur(function () {
+            $(".font").css("color","black");
+        })
+
         $("img").click(function () {
             $(this).hide().siblings().show();
         })
