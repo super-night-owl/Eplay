@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../../dist/css/bootstrap.css">
     <script src="../../dist/js/jquery-3.4.1.js"></script>
     <script src="../../dist/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="../../css/myhome.css">
     <title>Document</title>
     <style>
         h1 {
@@ -19,11 +18,206 @@
             background-color: white;
             margin-left: 30px;
         }
+
+        .wrap {
+            margin-left: 68px;
+        }
+
+        .top {
+            margin-top: 66px;
+            font-size: 30px;
+        }
+
+        .col1 {
+            float: left;
+        }
+
+        .col2 {
+            float: left;
+            margin-left: 20px;
+            font-size: 34px;
+            font-weight: bold;
+        }
+
+        .col3 {
+            float: left;
+            margin-left: 20px;
+            font-size: 36px;
+            font-weight: bold;
+            color: red;
+            margin-top: -2px;
+        }
+
+        .list {
+            float: left;
+        }
+
+        .list > li {
+            float: left;
+            margin-left: 20px;
+            background-color: #f6f6f6;
+            border: 1px solid #a5adaf;
+            width: 120px;
+            height: 50px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: normal;
+            color: #cbcbcb;
+            /*background: url("../../img/money/true.png") no-repeat 96px 24px;*/
+
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul, li {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        li > span {
+            display: inline-block;
+        }
+
+        .ver {
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .content {
+            vertical-align: middle;
+        }
+
+        input {
+            height: 50px;
+            border: 1px solid #a5adaf;
+            width: 220px;
+            font-size: 18px;
+            padding-left: 40px;
+        }
+
+        .m_left {
+            margin-left: 20px;
+        }
+
+        .font {
+            font-size: 20px;
+            margin-left: -34px;
+            margin-top: 12px;
+        }
+        .none{
+            display: none;
+        }
+
+        .ant-btn-red {
+            color: green;
+            color: #fff;
+            background-color: #FF5A44;
+            border-color: #FF5A44;
+            text-shadow: 0 -1px 0 rgba(0,0,0,0.12);
+            -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.045);
+            box-shadow: 0 2px 0 rgba(0,0,0,0.045);
+            margin-top: 50px;
+            margin-left: 148px;
+            font-size: 20px;
+            height:50px ;
+            width: 120px;
+        }
+
     </style>
 </head>
 <body class="back">
 <h1>余额充值</h1>
 <hr>
+<<<<<<< HEAD
 <nav></nav>
+=======
+<div class="wrap">
+    <div class="top">
+        <div class="col1">账户余额:</div>
+        <div class="col2">￥0</div>
+        <div class="clear"></div>
+    </div>
+    <div class="top">
+        <div class="col1">充值金额:</div>
+        <div class="col1">
+            <ul class="list ul1">
+                <li><span class="content">50元</span><span class="ver"></span></li>
+                <li><span class="content">100元</span><span class="ver"></span></li>
+                <li><span class="content">300元</span><span class="ver"></span></li>
+                <li><span class="content">500元</span><span class="ver"></span></li>
+                <li><span class="content">1000元</span><span class="ver"></span></li>
+                <li><span class="content">6666元</span><span class="ver"></span></li>
+            </ul>
+            <input class="list m_left input" type="text" placeholder="输入充值金额" value="" oninput="update()">
+            <span class="list font">元</span>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="top">
+        <div class="col1">充值货币:</div>
+        <div class="col3">￥<span class="charge">0</span></div>
+        <div class="clear"></div>
+    </div>
+    <div class="top">
+        <div class="col1">充值方式:</div>
+        <div class="col1 m_left">
+            <img class="col1 img1" src="../../img/money/wechat.png" alt="">
+            <img class="col1 none img2" src="../../img/money/wechat_hover.jpg" alt="">
+        </div>
+        <div class="col1 m_left">
+            <img class="col1 img3" src="../../img/money/alipay.jpg" alt="">
+            <img class="col1 none img4" src="../../img/money/alipay_hover.jpg" alt="">
+        </div>
+        <div class="clear"></div>
+        <button class="ant-btn ant-btn-red">去充值</button>
+    </div>
+</div>
+>>>>>>> devlop
 </body>
+<script>
+    $(function () {
+        $("img").click(function () {
+            $(this).hide().siblings().show();
+        })
+
+
+        $(".img1").click(function () {
+            if ($(".img4").css("display")=="block"){
+        $(".img4").hide();
+        $(".img3").show();
+            }})
+
+        $(".img3").click(function () {
+     if ($(".img2").css("display")=="block") {
+    $(".img2").hide();
+    $(".img1").show();}})
+
+        $("li").click(function () {
+            if ($(this).css("border")=="0.983193px solid rgb(165, 173, 175)"){
+                $(this).css("border","1px solid #25E198").css("background","url(../../img/money/true.png) no-repeat 96px 24px").css("color","#25E198");
+                var i=$(this).find(".content").text();
+                $(".charge").text(i);
+            }else {
+                $(this).css("background","#f6f6f6").css("border","1px solid #a5adaf").css("color","#cbcbcb");
+            }
+            $(this).siblings().css("background","#f6f6f6").css("border","1px solid #a5adaf").css("color","#cbcbcb");
+        })
+
+        // $(".input").change(function () {
+        //    var i=$(".input").val();
+        //     $(".charge").text(i);
+        // })
+    })
+
+    function update() {
+           var i=$(".input").val();
+            $(".charge").text(i);
+    }
+</script>
 </html>
