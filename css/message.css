@@ -79,11 +79,11 @@ label {
     margin-left: 10px;
 }
 
-.mycheck button {
-    margin-left: 20px;
-    height: 40px;
-    width: 80px;
-}
+/*.mycheck button {*/
+/*    margin-left: 20px;*/
+/*    height: 40px;*/
+/*    width: 80px;*/
+/*}*/
 
 .second {
     margin-left: 100px;
@@ -99,4 +99,33 @@ label {
     border-radius: 10px;
     color: #FFF;
     font-size: 20px;
+
+}
+
+button {
+    transition: all 0.2s ease 0s;
+    background-color: #ff5d23;
+
+    border: none;
+
+    color: white;
+
+    padding: 8px 24px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    font-size: 18px;
+
+    margin: 4px 16px;
+
+    cursor: pointer;
+
+}
+
+button:hover {
+    transform: scale(1.1);
 }
