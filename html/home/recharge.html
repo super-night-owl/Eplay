@@ -75,20 +75,10 @@
         ul {
             list-style: none;
         }
-
-        ul > li {
+        ul>li{
             transition: all 0.2s ease 0s;
         }
-
-        ul > li:hover {
-            transform: scale(1.1);
-        }
-
-        .big {
-            transition: all 0.2s ease 0s;
-        }
-
-        .big:hover {
+        ul>li:hover{
             transform: scale(1.1);
         }
 
@@ -109,14 +99,13 @@
         .content {
             vertical-align: middle;
         }
-
         input {
             height: 50px;
             border: 1px solid #a5adaf;
             width: 220px;
             font-size: 18px;
             padding-left: 40px;
-            color: #25E198;
+            color:#25E198 ;
         }
 
         .m_left {
@@ -128,8 +117,7 @@
             margin-left: -34px;
             margin-top: 12px;
         }
-
-        .none {
+        .none{
             display: none;
         }
 
@@ -138,18 +126,17 @@
             color: #fff;
             background-color: #FF5A44;
             border-color: #FF5A44;
-            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
-            -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
-            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+            text-shadow: 0 -1px 0 rgba(0,0,0,0.12);
+            -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.045);
+            box-shadow: 0 2px 0 rgba(0,0,0,0.045);
             margin-top: 50px;
             margin-left: 148px;
             font-size: 20px;
-            height: 50px;
+            height:50px ;
             width: 120px;
         }
-
         .input:focus {
-            outline: none;
+            outline:none;
             border: 1px solid #25E198;
         }
     </style>
@@ -189,11 +176,11 @@
     </div>
     <div class="top">
         <div class="col1">充值方式:</div>
-        <div class="col1 m_left big">
+        <div class="col1 m_left">
             <img class="col1 img1" src="../../img/money/wechat.png" alt="">
             <img class="col1 none img2" src="../../img/money/wechat_hover.jpg" alt="">
         </div>
-        <div class="col1 m_left big">
+        <div class="col1 m_left">
             <img class="col1 img3" src="../../img/money/alipay.jpg" alt="">
             <img class="col1 none img4" src="../../img/money/alipay_hover.jpg" alt="">
         </div>
@@ -205,9 +192,9 @@
 <script>
     $(function () {
         $(".input").focus(function () {
-            $(".font").css("color", "#25E198");
+            $(".font").css("color","#25E198");
         }).blur(function () {
-            $(".font").css("color", "black");
+            $(".font").css("color","black");
         })
 
         $("img").click(function () {
@@ -216,34 +203,30 @@
 
 
         $(".img1").click(function () {
-            if ($(".img4").css("display") == "block") {
-                $(".img4").hide();
-                $(".img3").show();
-            }
-        })
+            if ($(".img4").css("display")=="block"){
+        $(".img4").hide();
+        $(".img3").show();
+            }})
 
         $(".img3").click(function () {
-            if ($(".img2").css("display") == "block") {
-                $(".img2").hide();
-                $(".img1").show();
-            }
-        })
+     if ($(".img2").css("display")=="block") {
+    $(".img2").hide();
+    $(".img1").show();}})
 
         $("li").click(function () {
-            if ($(this).css("border") == "0.983193px solid rgb(165, 173, 175)") {
-                $(this).css("border", "1px solid #25E198").css("background", "url(../../img/money/true.png) no-repeat 96px 24px").css("color", "#25E198");
-                var i = $(this).find(".content").text();
+            if ($(this).css("border")=="0.983193px solid rgb(165, 173, 175)"){
+                $(this).css("border","1px solid #25E198").css("background","url(../../img/money/true.png) no-repeat 96px 24px").css("color","#25E198");
+                var i=$(this).find(".content").text();
                 $(".charge").text(i);
-            } else {
-                $(this).css("background", "#f6f6f6").css("border", "1px solid #a5adaf").css("color", "#cbcbcb");
+            }else {
+                $(this).css("background","#f6f6f6").css("border","1px solid #a5adaf").css("color","#cbcbcb");
             }
-            $(this).siblings().css("background", "#f6f6f6").css("border", "1px solid #a5adaf").css("color", "#cbcbcb");
+            $(this).siblings().css("background","#f6f6f6").css("border","1px solid #a5adaf").css("color","#cbcbcb");
         })
     })
-
     function update() {
-        var i = $(".input").val();
-        $(".charge").text(i);
+           var i=$(".input").val();
+            $(".charge").text(i);
     }
 </script>
 </html>

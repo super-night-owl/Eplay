@@ -96,9 +96,11 @@ body {
 }
 
 .container {
-    width: 95%;
+    width: 100%;
     height: 1000px;
     background: #fafafa;
+    /*margin-top: -20px;*/
+    /*margin-left: 0px;*/
     /* align-self: center; */
 }
 
@@ -112,7 +114,7 @@ body {
 }
 
 iframe {
-    padding: 50px;
+    padding: 50px 50px 50px 10px;
 }
 
 .container2 {
